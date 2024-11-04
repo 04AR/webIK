@@ -22,6 +22,7 @@ canvas.addEventListener("mousemove", (event) => {
     targetY = event.clientY;
 });
 
+
 function drawArm() {
     // Calculate distance to target
     const dx = targetX - originX;
@@ -90,6 +91,10 @@ function drawArm() {
     ctx.font = "16px Arial";
     ctx.fillText(`θ1: ${-angle1Deg.toFixed(2)}°`, canvas.width / 2 , canvas.height / 2); // Angle at joint 1
     ctx.fillText(`θ2: ${angle2Deg.toFixed(2)}°`, x1 - 60, y1 - 10); // Angle at joint 2
+
+    
+
+ctx.fillText(`INVERSE KINEMATICS`, (canvas.width / 2) , (canvas.height / 2) + 30);
 
     requestAnimationFrame(drawArm);
 }
